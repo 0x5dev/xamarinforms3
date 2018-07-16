@@ -1,0 +1,32 @@
+﻿/* control element */
+stacklayout {
+    padding: 20;
+}
+
+/* child element */
+stacklayout image{
+    height: 200;
+}
+
+/* base class */
+^contentpage {
+    background-color: lightpink;
+}
+
+/* ids StyleIds -> fallback x:Name */
+#profiletext {
+    background-color: #ff0000;
+    color: aliceblue;
+    font-style: bold;
+    font-size: medium;
+    text-align: center;
+}
+
+/* classes StyleClass */
+.profiletitle{
+    font-size: medium;
+    color: green;
+    text-align: center;
+}
+
+
