@@ -11,5 +11,15 @@ namespace XamarinDemo
         {
             InitializeComponent();
         }
+
+        void CodingPageClicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new FlexLayoutCodingPage());
+        }
+
+        void Handle_Clicked_1(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new FlexLayoutPhotoWallPage());
+        }
     }
 }

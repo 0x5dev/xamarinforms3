@@ -158,4 +158,7 @@
       <Name>XamarinDemo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\nick.png" />
+  </ItemGroup>
 </Project>
