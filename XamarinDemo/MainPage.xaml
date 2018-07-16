@@ -5,8 +5,26 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             x:Class="XamarinDemo.MainPage">
-    <local:RegistrationPage Title="A" />
-    <local:ProfilePage Title="B" />
-    <local:RegistrationPage Title="C" />
-    <local:RegistrationPage Title="D" />
+    <NavigationPage Title="Registration">
+        <x:Arguments>
+            <local:RegistrationPage />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Profile">
+        <x:Arguments>
+            <local:ProfilePage />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Flex Layout">
+        <x:Arguments>
+            <local:FlexLayoutPage />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Layout Compression">
+        <x:Arguments>
+            <local:LayoutCompressionPage />
+        </x:Arguments>
+    </NavigationPage>
+
+
 </TabbedPage>
