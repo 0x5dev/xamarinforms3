@@ -4,8 +4,8 @@
              Title="Profile"
              x:Class="XamarinDemo.ProfilePage">
     <ContentPage.Resources>
-<!--        <StyleSheet Source="/Assets/styles.css" />
--->    </ContentPage.Resources>
+    	<StyleSheet Source="Assets/styles.css" />
+   </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
