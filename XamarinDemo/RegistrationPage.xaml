@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             Title="Registration"
-             x:Class="XamarinDemo.RegistrationPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" Title="Registration" x:Class="XamarinDemo.RegistrationPage">
     <ContentPage.Resources>
         <Style TargetType="Entry">
             <Setter Property="VisualStateManager.VisualStateGroups">
@@ -43,16 +40,54 @@
                 </VisualStateGroupList>
             </Setter>
         </Style>
+        <Style x:Key="PasswordStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="#000000" />
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="PasswordStrength">
+                        <VisualState x:Name="Weak">
+                            <VisualState.Setters>
+                                <Setter Property="TextColor" Value="#ff0000" />
+                                <Setter Property="Text" Value="Weak" />
+                                <Setter Property="IsVisible" Value="true" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Medium">
+                            <VisualState.Setters>
+                                <Setter Property="TextColor" Value="#ffff00" />
+                                <Setter Property="Text" Value="Medium" />
+                                <Setter Property="IsVisible" Value="true" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Strong">
+                            <VisualState.Setters>
+                                <Setter Property="TextColor" Value="#00ff00" />
+                                <Setter Property="Text" Value="Strong" />
+                                <Setter Property="IsVisible" Value="true" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Label FontSize="Medium" TextColor="Black" Text="Please Register" />
             <BoxView HeightRequest="1" BackgroundColor="Silver" />
+            <!-- username -->
             <Entry Placeholder="Username" TextChanged="UsernameChanged" FontSize="13" />
             <Label x:Name="usernameMsg" IsVisible="false" Text="Username is required" />
+            <!-- password -->
+            <Label x:Name="strengthLabel" IsVisible="false" FontAttributes="Italic" Style="{StaticResource PasswordStyle}" />
             <Entry Placeholder="Password" IsPassword="true" TextChanged="PasswordChanged" FontSize="13" />
-            <Entry Placeholder="Phone Number" TextChanged="PhoneNumberChanged" FontSize="13" />
+            <Label x:Name="passwordMsg" IsVisible="false" Text="Password is required and must be greater then 6 characters long." />
+            <!-- phone number -->
+            <Entry Placeholder="Phone Number (e.g. 602-321-2392)" TextChanged="PhoneNumberChanged" FontSize="13" />
+            <Label x:Name="phoneNumberMsg" IsVisible="false" Text="Phone number is required and must be in the following format xxx-xxx-xxxx" />
+            <!-- favorite pet -->
             <Entry Placeholder="Favorite Pet" TextChanged="FavoritePetChanged" FontSize="13" />
+            <Label x:Name="favoritePetMsg" IsVisible="false" Text="Favorite pet is required" />
             <Button Text="Register" Clicked="Handle_Clicked" FontSize="13" />
         </StackLayout>
     </ContentPage.Content>
