@@ -6,12 +6,12 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             x:Class="XamarinDemo.MainPage">
-    <NavigationPage Title="Registration">
+    <NavigationPage Title="VSM">
         <x:Arguments>
             <local:RegistrationPage />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Profile">
+    <NavigationPage Title="CSS">
         <x:Arguments>
             <local:ProfilePage />
         </x:Arguments>
