@@ -79,7 +79,7 @@
             <Entry Placeholder="Username" TextChanged="UsernameChanged" FontSize="13" />
             <Label x:Name="usernameMsg" IsVisible="false" Text="Username is required" />
             <!-- password -->
-            <Label x:Name="strengthLabel" IsVisible="false" FontAttributes="Italic" Style="{StaticResource PasswordStyle}" />
+            <Label BackgroundColor="Gray" x:Name="strengthLabel" IsVisible="false" FontAttributes="Italic" Style="{StaticResource PasswordStyle}" />
             <Entry Placeholder="Password" IsPassword="true" TextChanged="PasswordChanged" FontSize="13" />
             <Label x:Name="passwordMsg" IsVisible="false" Text="Password is required and must be greater then 6 characters long." />
             <!-- phone number -->
